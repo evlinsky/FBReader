@@ -1,0 +1,29 @@
+// expat makefile for symbian
+//
+// Copyright (c) 2009 by iwanj@users.sourceforge.net
+//
+
+target      libexpat.dll
+targettype  dll
+uid			0x1000008d 0xe000ff00
+capability	none
+
+#ifdef WINSCW
+deffile	bwins/libexpat.def
+#else
+deffile	eabi/libexpat.def
+#endif
+
+systeminclude /epoc32/include
+systeminclude /epoc32/include/stdapis
+userinclude   ../lib
+
+sourcepath  ../lib
+
+source  xmlparse.c
+source  xmlrole.c
+source  xmltok.c
+source  xmltok_impl.c
+source  xmltok_ns.c
+
+library libc.lib

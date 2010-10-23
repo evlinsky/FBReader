@@ -1,0 +1,11 @@
+
+#include <appinfo.rh>
+UID2 KUidAppRegistrationResourceFile
+UID3 0xA000029F
+
+RESOURCE APP_REGISTRATION_INFO
+  {
+  app_file="SQLiteTest";
+  embeddability=KAppNotEmbeddable;
+  }
+

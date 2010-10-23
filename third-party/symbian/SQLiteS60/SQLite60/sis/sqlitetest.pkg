@@ -1,0 +1,18 @@
+;Header
+#{"sqlite3"},(0xA000029F),1,0,0
+
+;Supports S60 3.0
+[0x101F7961], 0, 0, 0, 
+   {"S60ProductID"}
+
+;Localized Vendor name
+%{"sqlite3"}
+
+;Unique Vendor name
+:"Vendor"
+
+;Files to install
+;sqlitetest.exe
+"c:\Symbian\9.1\S60_3rd_MR\epoc32\release\gcce\urel\sqlitetest.exe"-"!:\sys\bin\sqlitetest.exe"
+"c:\Symbian\9.1\S60_3rd_MR\epoc32\release\gcce\urel\sqlite.dll"-"!:\sys\bin\sqlite.dll"
+"c:\Symbian\9.1\S60_3rd_MR\epoc32\data\z\private\10003a3f\import\apps\sqlite_reg.rsc" -"!:\private\10003a3f\import\apps\sqlite_reg.rsc"

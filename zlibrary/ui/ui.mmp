@@ -1,0 +1,81 @@
+TARGET		libzlui-symbian.lib
+TARGETTYPE	lib
+UID      	0xE8000077
+VENDORID	0x70000001
+
+SYSTEMINCLUDE	..\core\include 
+SYSTEMINCLUDE	..\core\include\optionEntries
+SYSTEMINCLUDE	..\text\include  
+
+USERINCLUDE     ..\core\src\application\ 
+
+USERINCLUDE	src\symbian\application
+USERINCLUDE	src\symbian\dialogs
+USERINCLUDE	src\symbian\message
+USERINCLUDE	src\symbian\network
+USERINCLUDE	src\symbian\optionView
+USERINCLUDE	src\symbian\time
+USERINCLUDE	src\symbian\view
+ 
+SOURCEPATH	src\symbian
+
+SOURCE 		application\ZLSymbianApplicationWindow.cpp
+SOURCE 		dialogs\ZLSymbianDialog.cpp
+SOURCE 		dialogs\ZLSymbianDialogContent.cpp
+SOURCE 		dialogs\ZLSymbianDialogManager.cpp
+SOURCE 		dialogs\ZLSymbianOpenFileDialog.cpp
+SOURCE 		dialogs\ZLSymbianOptionsDialog.cpp
+SOURCE 		dialogs\ZLSymbianProgressDialog.cpp
+SOURCE 		dialogs\ZLSymbianUtil.cpp
+SOURCE 		library\ZLibrary.cpp
+SOURCE 		message\ZLSymbianMessage.cpp
+// av	SOURCE 		network\ZLSymbianNetworkManager.cpp
+SOURCE 		optionView\ZLSymbianOptionView.cpp
+SOURCE 		optionView\ZLSymbianOptionViewHolder.cpp
+SOURCE 		time\ZLSymbianTime.cpp
+SOURCE 		view\ZLSymbianPaintContext.cpp
+SOURCE 		view\ZLSymbianViewWidget.cpp
+
+SYSTEMINCLUDE	\epoc32\include\stdapis
+SYSTEMINCLUDE	\epoc32\include\stdapis\sys
+SYSTEMINCLUDE	\epoc32\include\stdapis\stlport
+
+SYSTEMINCLUDE	\epoc32\include\libc 
+SYSTEMINCLUDE	\epoc32\include 
+
+OPTION CW -wchar_t on 
+MACRO  _WCHAR_T_DECLARED
+EPOCSTACKSIZE 0x10000
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

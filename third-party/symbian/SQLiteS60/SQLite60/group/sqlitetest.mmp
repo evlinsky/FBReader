@@ -1,0 +1,24 @@
+TARGET                                  sqlitetest.exe 
+TARGETTYPE                              exe 
+CAPABILITY								LocalServices Location NetworkServices ReadDeviceData ReadUserData SwEvent UserEnvironment WriteDeviceData WriteUserData
+UID                                     0x100039CE 0xA000029F 
+VENDORID                                0 
+SOURCEPATH                              . 
+START RESOURCE sqlite_reg.rss 
+  TARGETPATH                              \private\10003a3f\import\apps 
+END  
+
+
+SOURCEPATH                              .. 
+SOURCE                        main.cpp 
+
+
+EPOCALLOWDLLDATA                         
+USERINCLUDE                             ..\src 
+SYSTEMINCLUDE                           \epoc32\include 
+SYSTEMINCLUDE                           \epoc32\include\stdapis 
+STATICLIBRARY                           libcrt0.lib 
+LIBRARY                                 libc.lib 
+LIBRARY                                 libdl.lib 
+LIBRARY                                 euser.lib 
+LIBRARY                                 sqlite.lib 

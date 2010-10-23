@@ -1,0 +1,195 @@
+// CORE.MMP
+//
+// Copyright (c) 1997-1999 Symbian Ltd.  All rights reserved.
+//
+
+TARGET		libzlcore.lib
+TARGETTYPE	lib
+UID      	0xE8000075
+VENDORID	0x70000001
+
+SYSTEMINCLUDE	include 
+SYSTEMINCLUDE 	include\optionEntries
+SYSTEMINCLUDE	..\..\third-party\symbian\expat-2.0.1\lib
+
+USERINCLUDE	src\application
+USERINCLUDE 	src\blockTreeView
+USERINCLUDE 	src\constants
+USERINCLUDE 	src\desktop\application
+USERINCLUDE 	src\desktop\dialogs
+USERINCLUDE 	src\dialogs
+USERINCLUDE 	src\encoding
+USERINCLUDE 	src\filesystem
+//el USERINCLUDE	src\filesystem\bzip2
+USERINCLUDE 	src\filesystem\tar
+USERINCLUDE 	src\filesystem\zip
+USERINCLUDE 	src\image
+USERINCLUDE 	src\language
+USERINCLUDE 	src\library
+USERINCLUDE 	src\logger
+USERINCLUDE 	src\message
+USERINCLUDE 	src\network
+USERINCLUDE 	src\network\requests
+USERINCLUDE 	src\optionEntries
+USERINCLUDE 	src\options
+USERINCLUDE 	src\resources
+USERINCLUDE 	src\runnable
+USERINCLUDE 	src\time
+USERINCLUDE 	src\typeId
+//el USERINCLUDE	src\unix\curl
+USERINCLUDE 	src\unix\filesystem
+USERINCLUDE 	src\unix\iconv
+USERINCLUDE 	src\unix\library
+//el USERINCLUDE	src\unix\time
+USERINCLUDE 	src\unix\xmlconfig
+USERINCLUDE 	src\util
+USERINCLUDE 	src\view
+//el USERINCLUDE	src\win32\config
+//el USERINCLUDE	src\win32\encoding
+//el USERINCLUDE	src\win32\filesystem
+USERINCLUDE 	src\xml
+USERINCLUDE 	src\xml\expat
+
+
+SOURCEPATH	src
+
+MACRO 		DO_ICONV_CAST
+
+SOURCE 		application\ZLApplication.cpp
+SOURCE 		application\ZLApplicationActions.cpp
+SOURCE 		application\ZLApplicationBase.cpp
+SOURCE 		application\ZLApplicationWindow.cpp
+SOURCE 		application\ZLKeyBindings.cpp
+SOURCE 		application\ZLMenu.cpp
+SOURCE 		application\ZLToolbar.cpp
+SOURCE 		blockTreeView\ZLBlockTreeNode.cpp
+SOURCE 		blockTreeView\ZLBlockTreeView.cpp
+SOURCE 		constants\ZLMimeType.cpp
+SOURCE 		constants\ZLXMLNamespace.cpp
+SOURCE 		desktop\application\ZLDesktopApplicationWindow.cpp
+SOURCE 		desktop\dialogs\ZLDesktopOpenFileDialog.cpp
+SOURCE 		desktop\dialogs\ZLDesktopOptionsDialog.cpp
+SOURCE 		dialogs\ZLDialog.cpp
+SOURCE 		dialogs\ZLDialogContent.cpp
+SOURCE 		dialogs\ZLDialogContentBuilder.cpp
+SOURCE 		dialogs\ZLDialogManager.cpp
+SOURCE 		dialogs\ZLOpenFileDialog.cpp
+SOURCE 		dialogs\ZLOptionEntry.cpp
+SOURCE 		dialogs\ZLOptionsDialog.cpp
+SOURCE 		dialogs\ZLOptionView.cpp
+SOURCE 		dialogs\ZLProgressDialog.cpp
+SOURCE 		encoding\DummyEncodingConverter.cpp
+SOURCE 		encoding\EncodingCollectionReader.cpp
+SOURCE 		encoding\MyEncodingConverter.cpp
+SOURCE 		encoding\ZLEncodingCollection.cpp
+SOURCE 		encoding\ZLEncodingConverter.cpp
+SOURCE 		encoding\ZLEncodingSet.cpp
+SOURCE 		filesystem\ZLDir.cpp
+SOURCE 		filesystem\ZLFile.cpp
+SOURCE 		filesystem\ZLFSManager.cpp
+SOURCE 		filesystem\ZLInputStreamDecorator.cpp
+//el SOURCE 		filesystem\bzip2\ZLBzip2InputStream.cpp
+SOURCE 		filesystem\tar\ZLTar.cpp
+SOURCE 		filesystem\zip\ZLGzipInputStream.cpp
+SOURCE 		filesystem\zip\ZLZDecompressor.cpp
+SOURCE 		filesystem\zip\ZLZipDir.cpp
+SOURCE 		filesystem\zip\ZLZipEntryCache.cpp
+SOURCE 		filesystem\zip\ZLZipHeader.cpp
+SOURCE 		filesystem\zip\ZLZipInputStream.cpp
+SOURCE 		image\ZLBase64EncodedImage.cpp
+SOURCE 		image\ZLFileImage.cpp
+SOURCE 		image\ZLImage.cpp
+SOURCE 		image\ZLImageManager.cpp
+SOURCE 		image\ZLNetworkImage.cpp
+SOURCE 		image\ZLStreamImage.cpp
+SOURCE 		language\ZLCharSequence.cpp
+SOURCE 		language\ZLLanguageDetector.cpp
+SOURCE 		language\ZLLanguageList.cpp
+SOURCE 		language\ZLLanguageMatcher.cpp
+SOURCE 		language\ZLStatistics.cpp
+SOURCE 		language\ZLStatisticsGenerator.cpp
+SOURCE 		language\ZLStatisticsItem.cpp
+SOURCE 		language\ZLStatisticsXMLReader.cpp
+SOURCE 		language\ZLStatisticsXMLWriter.cpp
+SOURCE 		library\ZLibrary.cpp
+SOURCE 		logger\ZLLogger.cpp
+SOURCE 		message\ZLMessage.cpp
+SOURCE 		network\ZLAsynchronousInputStream.cpp
+SOURCE 		network\ZLGzipAsynchronousInputStream.cpp
+SOURCE 		network\ZLNetworkManager.cpp
+SOURCE 		network\ZLNetworkRequest.cpp
+SOURCE 		network\ZLNetworkSSLCertificate.cpp
+SOURCE 		network\ZLNetworkUtil.cpp
+SOURCE 		network\ZLPlainAsynchronousInputStream.cpp
+SOURCE 		network\requests\ZLNetworkDownloadRequest.cpp
+SOURCE 		network\requests\ZLNetworkNoActionRequest.cpp
+SOURCE 		network\requests\ZLNetworkReadToStringRequest.cpp
+SOURCE 		network\requests\ZLNetworkXMLParserRequest.cpp
+SOURCE 		optionEntries\ZLColorOptionBuilder.cpp
+SOURCE 		optionEntries\ZLFontFamilyOptionEntry.cpp
+SOURCE 		optionEntries\ZLLanguageOptionEntry.cpp
+SOURCE 		optionEntries\ZLSimpleKeyOptionEntry.cpp
+SOURCE 		optionEntries\ZLSimpleOptionEntry.cpp
+SOURCE 		optionEntries\ZLStringEditOptionEntry.cpp
+SOURCE 		optionEntries\ZLStringInfoEntry.cpp
+SOURCE 		optionEntries\ZLToggleBooleanOptionEntry.cpp
+SOURCE 		options\ZLCategoryKey.cpp
+SOURCE 		options\ZLConfig.cpp
+SOURCE 		options\ZLOptions.cpp
+SOURCE 		resources\ZLResource.cpp
+SOURCE 		runnable\ZLExecutionData.cpp
+SOURCE 		runnable\ZLRunnable.cpp
+SOURCE 		time\ZLTime.cpp
+SOURCE 		time\ZLTimeManager.cpp
+SOURCE 		typeId\ZLTypeId.cpp
+//el SOURCE 		unix\curl\ZLCurlNetworkManager.cpp
+SOURCE 		unix\filesystem\ZLUnixFileInputStream.cpp
+SOURCE 		unix\filesystem\ZLUnixFileOutputStream.cpp
+SOURCE 		unix\filesystem\ZLUnixFSDir.cpp
+SOURCE 		unix\filesystem\ZLUnixFSManager.cpp
+SOURCE 		unix\iconv\IConvEncodingConverter.cpp
+// el SOURCE		unix\library\ZLibrary.cpp
+SOURCE 		unix\library\ZUnixLibrary.cpp
+//el SOURCE 		unix\time\ZLUnixTime.cpp
+SOURCE 		unix\xmlconfig\AsciiEncoder.cpp
+SOURCE 		unix\xmlconfig\XMLConfig.cpp
+SOURCE 		unix\xmlconfig\XMLConfigDelta.cpp
+SOURCE 		unix\xmlconfig\XMLConfigDeltaWriter.cpp
+SOURCE 		unix\xmlconfig\XMLConfigIO.cpp
+SOURCE 		unix\xmlconfig\XMLConfigReader.cpp
+SOURCE 		unix\xmlconfig\XMLConfigWriter.cpp
+SOURCE 		util\ZLFileUtil.cpp
+SOURCE 		util\ZLKeyUtil.cpp
+SOURCE 		util\ZLLanguageUtil.cpp
+SOURCE 		util\ZLSearchUtil.cpp
+SOURCE 		util\ZLStringUtil.cpp
+SOURCE 		util\ZLUnicodeUtil.cpp
+SOURCE 		util\ZLUserData.cpp
+SOURCE 		view\ZLMirroredPaintContext.cpp
+SOURCE 		view\ZLPaintContext.cpp
+SOURCE 		view\ZLView.cpp
+//el SOURCE 		win32\config\RegistryUtil.cpp
+//el SOURCE 		win32\config\StringEncoder.cpp
+//el SOURCE 		win32\config\ZLWin32Config.cpp
+//el SOURCE 		win32\config\ZLWin32ConfigIO.cpp
+//el SOURCE 		win32\encoding\ZLWin32EncodingConverter.cpp
+//el SOURCE 		win32\filesystem\ZLWin32FileInputStream.cpp
+//el SOURCE 		win32\filesystem\ZLWin32FileOutputStream.cpp
+//el SOURCE 		win32\filesystem\ZLWin32FSDir.cpp
+//el SOURCE 		win32\filesystem\ZLWin32FSManager.cpp
+//el SOURCE 		win32\filesystem\ZLWin32RootDir.cpp
+SOURCE 		xml\ZLXMLReader.cpp
+SOURCE 		xml\ZLXMLWriter.cpp
+SOURCE 		xml\expat\ZLXMLReaderInternal.cpp
+
+SYSTEMINCLUDE	\epoc32\include\stdapis
+SYSTEMINCLUDE	\epoc32\include\stdapis\sys
+SYSTEMINCLUDE	\epoc32\include\stdapis\stlport
+
+SYSTEMINCLUDE	\epoc32\include\libc 
+SYSTEMINCLUDE	\epoc32\include 
+
+OPTION CW -wchar_t on
+MACRO _WCHAR_T_DECLARED
+EPOCSTACKSIZE 0x10000
+        

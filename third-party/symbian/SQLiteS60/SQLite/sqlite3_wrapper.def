@@ -1,0 +1,5 @@
+EXPORTS
+sqlite3_bind_double_ref
+sqlite3_bind_int64_ref
+sqlite3_column_double_ref
+sqlite3_column_int64_ref

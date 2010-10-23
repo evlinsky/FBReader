@@ -1,0 +1,63 @@
+// TEXT.MMP
+//
+// Copyright (c) 1997-1999 Symbian Ltd.  All rights reserved.
+//
+
+TARGET		libzltext.lib
+TARGETTYPE	lib
+UID      	0xE8000076
+VENDORID	0x70000001
+
+SYSTEMINCLUDE	include 
+SYSTEMINCLUDE	..\core\include
+SYSTEMINCLUDE	..\core\include\optionEntries
+
+USERINCLUDE 	src\area
+USERINCLUDE 	src\hyphenation
+USERINCLUDE 	src\model
+USERINCLUDE 	src\style
+USERINCLUDE 	src\view
+USERINCLUDE 	src\styleOptions
+
+
+SOURCEPATH	src
+
+SOURCE 		area\ZLTextArea.cpp
+SOURCE 		area\ZLTextAreaController.cpp
+SOURCE 		area\ZLTextAreaStyle.cpp
+SOURCE 		area\ZLTextArea_drawTextLine.cpp
+SOURCE 		area\ZLTextArea_drawTreeLines.cpp
+SOURCE 		area\ZLTextArea_drawWord.cpp
+SOURCE 		area\ZLTextArea_prepareTextLine.cpp
+SOURCE 		area\ZLTextArea_processTextLine.cpp
+SOURCE 		area\ZLTextElement.cpp
+SOURCE 		area\ZLTextParagraphBuilder.cpp
+SOURCE 		area\ZLTextParagraphCursor.cpp
+SOURCE 		area\ZLTextSelectionModel.cpp
+SOURCE 		area\ZLTextWord.cpp
+SOURCE 		hyphenation\ZLTextHyphenationReader.cpp
+SOURCE 		hyphenation\ZLTextHyphenator.cpp
+SOURCE 		hyphenation\ZLTextTeXHyphenator.cpp
+SOURCE 		model\ZLTextModel.cpp
+SOURCE 		model\ZLTextParagraph.cpp
+SOURCE 		model\ZLTextRowMemoryAllocator.cpp
+SOURCE 		style\ZLTextDecoratedStyle.cpp
+SOURCE 		style\ZLTextStyle.cpp
+SOURCE 		style\ZLTextStyleCollection.cpp
+SOURCE 		styleOptions\ZLTextStyleOptions.cpp
+SOURCE 		view\ZLTextPositionIndicator.cpp
+SOURCE 		view\ZLTextSelectionScroller.cpp
+SOURCE 		view\ZLTextView.cpp
+SOURCE 		view\ZLTextView_paint.cpp
+
+SYSTEMINCLUDE	\epoc32\include\stdapis
+SYSTEMINCLUDE	\epoc32\include\stdapis\sys
+SYSTEMINCLUDE	\epoc32\include\stdapis\stlport
+
+SYSTEMINCLUDE	\epoc32\include\libc 
+SYSTEMINCLUDE	\epoc32\include 
+
+OPTION CW -wchar_t on
+MACRO _WCHAR_T_DECLARED
+EPOCSTACKSIZE 0x10000
+        

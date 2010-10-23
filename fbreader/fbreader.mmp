@@ -1,0 +1,355 @@
+// FBREADER.MMP
+//
+// Copyright (c) 1997-1999 Symbian Ltd.  All rights reserved.
+//
+
+TARGET		fbreader
+TARGETTYPE	exe
+UID      	0xE8000077
+VENDORID	0x70000001
+
+SYSTEMINCLUDE	..\zlibrary\core\include 
+SYSTEMINCLUDE	..\zlibrary\core\include\optionEntries 
+SYSTEMINCLUDE	..\zlibrary\text\include
+SYSTEMINCLUDE	..\third-party\symbian\SQLiteS60\SQLite60\src 
+
+USERINCLUDE	src\blockTree
+USERINCLUDE	src\bookmodel
+USERINCLUDE	src\database
+USERINCLUDE	src\encodingOption
+USERINCLUDE	src\external
+USERINCLUDE	src\fbreader
+USERINCLUDE	src\formats
+USERINCLUDE	src\library
+USERINCLUDE	src\libraryActions
+USERINCLUDE	src\libraryTree
+USERINCLUDE	src\migration
+USERINCLUDE	src\network
+USERINCLUDE	src\networkActions
+USERINCLUDE	src\networkTree
+USERINCLUDE	src\options
+USERINCLUDE	src\optionsDialog
+USERINCLUDE	src\database\booksdb
+USERINCLUDE	src\database\sqldb
+USERINCLUDE	src\database\booksdb\runnables
+USERINCLUDE	src\database\sqldb\implsqlite
+USERINCLUDE	src\formats\chm
+USERINCLUDE	src\formats\css
+// el USERINCLUDE	src\formats\docbook
+// el USERINCLUDE	src\formats\dummy
+USERINCLUDE	src\formats\fb2
+USERINCLUDE	src\formats\html
+USERINCLUDE	src\formats\oeb
+USERINCLUDE	src\formats\openreader
+USERINCLUDE	src\formats\pdb
+// el USERINCLUDE	src\formats\pdf
+USERINCLUDE	src\formats\rtf
+USERINCLUDE	src\formats\tcr
+USERINCLUDE	src\formats\txt
+USERINCLUDE	src\formats\util
+USERINCLUDE	src\formats\xhtml
+USERINCLUDE	src\network\atom
+USERINCLUDE	src\network\authentication
+USERINCLUDE	src\network\opds
+USERINCLUDE	src\network\authentication\basic
+USERINCLUDE	src\network\authentication\litres
+
+
+SOURCEPATH	src
+
+SOURCE 		blockTree\FBReaderNode.cpp
+SOURCE 		bookmodel\BookModel.cpp
+SOURCE 		bookmodel\BookReader.cpp
+SOURCE 		database\booksdb\BooksDB.cpp
+SOURCE 		database\booksdb\BooksDBQuery.cpp
+SOURCE 		database\booksdb\BooksDBUtil.cpp
+SOURCE 		database\booksdb\BooksDB_BookAuthor.cpp
+SOURCE 		database\booksdb\BooksDB_BookSeries.cpp
+SOURCE 		database\booksdb\BooksDB_BookTag.cpp
+SOURCE 		database\booksdb\runnables\ClearBooksDBRunnable.cpp
+SOURCE 		database\booksdb\runnables\DeleteBookRunnable.cpp
+SOURCE 		database\booksdb\runnables\DeleteFileEntriesRunnable.cpp
+SOURCE 		database\booksdb\runnables\FindFileIdRunnable.cpp
+SOURCE 		database\booksdb\runnables\InitBooksDBRunnable.cpp
+SOURCE 		database\booksdb\runnables\LoadFileEntriesRunnable.cpp
+SOURCE 		database\booksdb\runnables\LoadRecentBooksRunnable.cpp
+SOURCE 		database\booksdb\runnables\SaveAuthorsRunnable.cpp
+SOURCE 		database\booksdb\runnables\SaveBookRunnable.cpp
+SOURCE 		database\booksdb\runnables\SaveBookStateStackRunnable.cpp
+SOURCE 		database\booksdb\runnables\SaveRecentBooksRunnable.cpp
+SOURCE 		database\booksdb\runnables\SaveSeriesRunnable.cpp
+SOURCE 		database\booksdb\runnables\SaveTableBookRunnable.cpp
+SOURCE 		database\sqldb\DataBase.cpp
+SOURCE 		database\sqldb\DBCommand.cpp
+SOURCE 		database\sqldb\DBCommandParameter.cpp
+SOURCE 		database\sqldb\DBConnection.cpp
+SOURCE 		database\sqldb\DBDataReader.cpp
+SOURCE 		database\sqldb\DBIntValue.cpp
+SOURCE 		database\sqldb\DBNullValue.cpp
+SOURCE 		database\sqldb\DBRealValue.cpp
+SOURCE 		database\sqldb\DBTextValue.cpp
+SOURCE 		database\sqldb\DBValue.cpp
+SOURCE 		database\sqldb\implsqlite\SQLiteCommand.cpp
+SOURCE 		database\sqldb\implsqlite\SQLiteConnection.cpp
+SOURCE 		database\sqldb\implsqlite\SQLiteDataBase.cpp
+SOURCE 		database\sqldb\implsqlite\SQLiteDataReader.cpp
+SOURCE 		database\sqldb\implsqlite\SQLiteFactory.cpp
+SOURCE 		encodingOption\EncodingOptionEntry.cpp
+SOURCE 		external\ProgramCollection.cpp
+SOURCE 		fbreader\AddBookAction.cpp
+SOURCE 		fbreader\BookInfoDialog.cpp
+SOURCE 		fbreader\BooksOrderAction.cpp
+SOURCE 		fbreader\BookTextView.cpp
+SOURCE 		fbreader\ContentsView.cpp
+SOURCE 		fbreader\FBReader.cpp
+SOURCE 		fbreader\FBReaderActionCode.cpp
+SOURCE 		fbreader\FBReaderActions.cpp
+SOURCE 		fbreader\FBView.cpp
+SOURCE 		fbreader\main.cpp
+SOURCE 		fbreader\RecentBooksPopupData.cpp
+SOURCE 		fbreader\ScrollingAction.cpp
+SOURCE 		fbreader\SearchActions.cpp
+SOURCE 		fbreader\SearchOnNetworkAction.cpp
+SOURCE 		fbreader\TimeUpdater.cpp
+SOURCE 		formats\EncodedTextReader.cpp
+SOURCE 		formats\FormatPlugin.cpp
+SOURCE 		formats\PluginCollection.cpp
+SOURCE 		formats\chm\BitStream.cpp
+SOURCE 		formats\chm\CHMFile.cpp
+SOURCE 		formats\chm\CHMFileImage.cpp
+SOURCE 		formats\chm\CHMPlugin.cpp
+SOURCE 		formats\chm\CHMReferenceCollection.cpp
+SOURCE 		formats\chm\E8Decoder.cpp
+SOURCE 		formats\chm\HHCReader.cpp
+SOURCE 		formats\chm\HHCReferenceCollector.cpp
+SOURCE 		formats\chm\HtmlSectionReader.cpp
+SOURCE 		formats\chm\HuffmanDecoder.cpp
+SOURCE 		formats\chm\LZXDecompressor.cpp
+SOURCE 		formats\css\StyleSheetParser.cpp
+SOURCE 		formats\css\StyleSheetTable.cpp
+// el SOURCE 		formats\docbook\DocBookBookReader.cpp
+// el SOURCE 		formats\docbook\DocBookDescriptionReader.cpp
+// el SOURCE 		formats\docbook\DocBookPlugin.cpp
+// el SOURCE 		formats\docbook\DocBookReader.cpp
+// el SOURCE 		formats\dummy\DummyBookReader.cpp
+// el SOURCE 		formats\dummy\DummyMetaInfoReader.cpp
+// el SOURCE 		formats\dummy\DummyPlugin.cpp
+SOURCE 		formats\fb2\FB2BookReader.cpp
+SOURCE 		formats\fb2\FB2CoverReader.cpp
+SOURCE 		formats\fb2\FB2MetaInfoReader.cpp
+SOURCE 		formats\fb2\FB2Plugin.cpp
+SOURCE 		formats\fb2\FB2Reader.cpp
+SOURCE 		formats\fb2\FB2TagManager.cpp
+SOURCE 		formats\html\HtmlBookReader.cpp
+SOURCE 		formats\html\HtmlDescriptionReader.cpp
+SOURCE 		formats\html\HtmlEntityCollection.cpp
+SOURCE 		formats\html\HtmlPlugin.cpp
+SOURCE 		formats\html\HtmlReader.cpp
+SOURCE 		formats\html\HtmlReaderStream.cpp
+SOURCE 		formats\oeb\NCXReader.cpp
+SOURCE 		formats\oeb\OEBBookReader.cpp
+SOURCE 		formats\oeb\OEBCoverReader.cpp
+SOURCE 		formats\oeb\OEBMetaInfoReader.cpp
+SOURCE 		formats\oeb\OEBPlugin.cpp
+SOURCE 		formats\oeb\OEBTextStream.cpp
+SOURCE 		formats\openreader\OpenReaderPlugin.cpp
+SOURCE 		formats\openreader\ORBookReader.cpp
+SOURCE 		formats\openreader\ORDescriptionReader.cpp
+SOURCE 		formats\pdb\BitReader.cpp
+SOURCE 		formats\pdb\DocDecompressor.cpp
+SOURCE 		formats\pdb\EReaderPlugin.cpp
+SOURCE 		formats\pdb\EReaderStream.cpp
+SOURCE 		formats\pdb\HtmlMetainfoReader.cpp
+SOURCE 		formats\pdb\HuffDecompressor.cpp
+SOURCE 		formats\pdb\MobipocketHtmlBookReader.cpp
+SOURCE 		formats\pdb\MobipocketPlugin.cpp
+SOURCE 		formats\pdb\PalmDocLikePlugin.cpp
+SOURCE 		formats\pdb\PalmDocLikeStream.cpp
+SOURCE 		formats\pdb\PalmDocPlugin.cpp
+SOURCE 		formats\pdb\PalmDocStream.cpp
+SOURCE 		formats\pdb\PdbPlugin.cpp
+SOURCE 		formats\pdb\PdbReader.cpp
+SOURCE 		formats\pdb\PdbStream.cpp
+SOURCE 		formats\pdb\PluckerBookReader.cpp
+SOURCE 		formats\pdb\PluckerImages.cpp
+SOURCE 		formats\pdb\PluckerPlugin.cpp
+SOURCE 		formats\pdb\PluckerTextStream.cpp
+SOURCE 		formats\pdb\PmlBookReader.cpp
+SOURCE 		formats\pdb\PmlReader.cpp
+SOURCE 		formats\pdb\SimplePdbPlugin.cpp
+SOURCE 		formats\pdb\ZTXTPlugin.cpp
+SOURCE 		formats\pdb\ZTXTStream.cpp
+// el SOURCE 		formats\pdf\PdfBookReader.cpp
+// el SOURCE 		formats\pdf\PdfDescriptionReader.cpp
+// el SOURCE 		formats\pdf\PdfObject.cpp
+// el SOURCE 		formats\pdf\PdfPlugin.cpp
+// el SOURCE 		formats\pdf\StringStream.cpp
+SOURCE 		formats\rtf\RtfBookReader.cpp
+SOURCE 		formats\rtf\RtfDescriptionReader.cpp
+SOURCE 		formats\rtf\RtfImage.cpp
+SOURCE 		formats\rtf\RtfPlugin.cpp
+SOURCE 		formats\rtf\RtfReader.cpp
+SOURCE 		formats\rtf\RtfReaderStream.cpp
+SOURCE 		formats\tcr\PPLBookReader.cpp
+SOURCE 		formats\tcr\TcrPlugin.cpp
+SOURCE 		formats\tcr\TcrStream.cpp
+SOURCE 		formats\txt\PlainTextFormat.cpp
+SOURCE 		formats\txt\TxtBookReader.cpp
+SOURCE 		formats\txt\TxtPlugin.cpp
+SOURCE 		formats\txt\TxtReader.cpp
+SOURCE 		formats\util\EntityFilesCollector.cpp
+SOURCE 		formats\util\MergedStream.cpp
+SOURCE 		formats\util\MiscUtil.cpp
+SOURCE 		formats\util\TextFormatDetector.cpp
+SOURCE 		formats\util\XMLTextStream.cpp
+SOURCE 		formats\xhtml\XHTMLReader.cpp
+SOURCE 		library\Author.cpp
+SOURCE 		library\Book.cpp
+SOURCE 		library\Comparators.cpp
+SOURCE 		library\Library.cpp
+SOURCE 		library\Tag.cpp
+SOURCE 		libraryActions\AuthorInfoDialog.cpp
+SOURCE 		libraryActions\BooksUtil.cpp
+SOURCE 		libraryActions\LibraryAuthorActions.cpp
+SOURCE 		libraryActions\LibraryBookActions.cpp
+SOURCE 		libraryActions\LibraryTagActions.cpp
+SOURCE 		libraryTree\AuthorNode.cpp
+SOURCE 		libraryTree\BookNode.cpp
+SOURCE 		libraryTree\LibraryByAuthorView.cpp
+SOURCE 		libraryTree\LibraryByTagView.cpp
+SOURCE 		libraryTree\LibraryView.cpp
+SOURCE 		libraryTree\SeriesNode.cpp
+SOURCE 		libraryTree\TagNode.cpp
+SOURCE 		migration\BookInfo.cpp
+SOURCE 		migration\FB2MigrationReader.cpp
+SOURCE 		migration\HtmlDCTagsReader.cpp
+SOURCE 		migration\migrate.cpp
+SOURCE 		migration\Migration.cpp
+SOURCE 		migration\Migration_0_10_4.cpp
+SOURCE 		migration\Migration_0_11_0.cpp
+SOURCE 		migration\Migration_0_8_11.cpp
+SOURCE 		migration\Migration_0_8_13.cpp
+SOURCE 		migration\Migration_0_8_16.cpp
+SOURCE 		migration\OEBMigrationReader.cpp
+SOURCE 		network\BookReference.cpp
+SOURCE 		network\NetworkBookCollection.cpp
+SOURCE 		network\NetworkBookItem.cpp
+SOURCE 		network\NetworkCatalogItem.cpp
+SOURCE 		network\NetworkComparators.cpp
+SOURCE 		network\NetworkErrors.cpp
+SOURCE 		network\NetworkItem.cpp
+SOURCE 		network\NetworkLink.cpp
+SOURCE 		network\NetworkLinkCollection.cpp
+SOURCE 		network\NetworkOperationData.cpp
+SOURCE 		network\SearchResult.cpp
+SOURCE 		network\UserList.cpp
+SOURCE 		network\atom\ATOMConstructs.cpp
+SOURCE 		network\atom\ATOMContainers.cpp
+SOURCE 		network\atom\ATOMMetadata.cpp
+SOURCE 		network\authentication\NetworkAuthenticationManager.cpp
+SOURCE 		network\authentication\basic\BasicAuthenticationManager.cpp
+SOURCE 		network\authentication\basic\BasicAuthenticationRequest.cpp
+SOURCE 		network\authentication\litres\LitResAuthenticationDataParser.cpp
+SOURCE 		network\authentication\litres\LitResAuthenticationManager.cpp
+SOURCE 		network\authentication\litres\LitResBookshelfItem.cpp
+SOURCE 		network\authentication\litres\LitResDataParser.cpp
+SOURCE 		network\authentication\litres\LitResGenre.cpp
+SOURCE 		network\authentication\litres\LitResGenresParser.cpp
+SOURCE 		network\authentication\litres\LitResUtil.cpp
+SOURCE 		network\opds\NetworkOPDSFeedReader.cpp
+SOURCE 		network\opds\OPDSCatalogItem.cpp
+SOURCE 		network\opds\OPDSLink.cpp
+SOURCE 		network\opds\OPDSLink_Reader.cpp
+SOURCE 		network\opds\OPDSMetadata.cpp
+SOURCE 		network\opds\OPDSXMLParser.cpp
+SOURCE 		networkActions\AuthenticationDialog.cpp
+SOURCE 		networkActions\NetworkActions.cpp
+SOURCE 		networkActions\NetworkOperationRunnable.cpp
+SOURCE 		networkActions\PasswordRecoveryDialog.cpp
+SOURCE 		networkActions\RegisterUserDialog.cpp
+SOURCE 		networkTree\NetworkAuthorNode.cpp
+SOURCE 		networkTree\NetworkBookNode.cpp
+SOURCE 		networkTree\NetworkCatalogNode.cpp
+SOURCE 		networkTree\NetworkCatalogRootNode.cpp
+SOURCE 		networkTree\NetworkCatalogUtil.cpp
+SOURCE 		networkTree\NetworkContainerNode.cpp
+SOURCE 		networkTree\NetworkNodesFactory.cpp
+SOURCE 		networkTree\NetworkSeriesNode.cpp
+SOURCE 		networkTree\NetworkView.cpp
+SOURCE 		networkTree\SearchResultNode.cpp
+SOURCE 		options\FBCategoryKey.cpp
+SOURCE 		options\FBOptions.cpp
+SOURCE 		options\FBTextStyle.cpp
+SOURCE 		optionsDialog\ConfigPage.cpp
+SOURCE 		optionsDialog\FormatOptionsPage.cpp
+SOURCE 		optionsDialog\IndicatorTab.cpp
+SOURCE 		optionsDialog\IntegrationTab.cpp
+SOURCE 		optionsDialog\KeyBindingsPage.cpp
+SOURCE 		optionsDialog\NetworkLibraryPage.cpp
+SOURCE 		optionsDialog\OptionsDialog.cpp
+SOURCE 		optionsDialog\OptionsPage.cpp
+SOURCE 		optionsDialog\StyleOptionsPage.cpp
+
+SYSTEMINCLUDE	\epoc32\include\stdapis
+SYSTEMINCLUDE	\epoc32\include\stdapis\sys
+SYSTEMINCLUDE	\epoc32\include\stdapis\stlport
+
+SYSTEMINCLUDE	\epoc32\include\libc 
+SYSTEMINCLUDE	\epoc32\include 
+
+LIBRARY		libc.lib 
+LIBRARY 	euser.lib 
+STATICLIBRARY	libcrt0.lib
+
+STATICLIBRARY 	libzlcore.lib
+STATICLIBRARY 	libzltext.lib
+STATICLIBRARY	libzlui-symbian.lib
+
+LIBRARY 	libexpat.lib
+LIBRARY 	sqlite.lib
+LIBRARY		ezlib.lib
+
+#ifdef EPOC32
+LIBRARY 	libstdcpp.lib
+#else
+FIRSTLIB 	../udeb/libstdcpp.lib
+STATICLIBRARY	eexe.lib
+#endif
+
+OPTION CW -wchar_t on
+MACRO _WCHAR_T_DECLARED
+EPOCSTACKSIZE 0x10000
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

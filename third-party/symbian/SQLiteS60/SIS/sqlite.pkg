@@ -1,0 +1,16 @@
+;Header
+#{"SQLite Database"},(0xA000029F),3,5,4
+
+;Supports S60 3.0
+[0x101F7961], 0, 0, 0, 
+   {"S60ProductID"}
+
+;Localized Vendor name
+%{"SQLite Database"}
+
+;Unique Vendor name
+:"Vendor"
+
+;Files to install
+"System.Data.SQLiteClient.dll"-"!:\Resource\RedFiveLabs\Gac\System.Data.SQLiteClient.dll"
+"sqlite.dll"-"!:\sys\bin\sqlite.dll"

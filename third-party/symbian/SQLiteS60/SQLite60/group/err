@@ -1,0 +1,18 @@
+  make -r  -f "\S60\devices\S60_3rd_FP2_SDK_v1.1\EPOC32\BUILD\project\distr\sqlite\SQLite60\group\EXPORT.make" EXPORT VERBOSE=-s
+Nothing to do
+  make -r  -f "\S60\devices\S60_3rd_FP2_SDK_v1.1\EPOC32\BUILD\project\distr\sqlite\SQLite60\group\WINSCW.make" MAKEFILE VERBOSE=-s
+perl -S makmake.pl  -D \project\distr\sqlite\SQLite60\group\SQLITE WINSCW  
+WARNING: WARNING: Library statements (DEBUGLIBRARY, LIBRARY or STATICLIBRARY) not permitted with TARGETTYPE LIB.
+WARNING: WARNING: Library statements (DEBUGLIBRARY, LIBRARY or STATICLIBRARY) ignored.
+
+perl -S makmake.pl  -D \project\distr\sqlite\SQLite60\group\SQLITETEST WINSCW  
+  make -r  -f "\S60\devices\S60_3rd_FP2_SDK_v1.1\EPOC32\BUILD\project\distr\sqlite\SQLite60\group\WINSCW.make" LIBRARY VERBOSE=-s
+make -s  -r -f "\S60\devices\S60_3rd_FP2_SDK_v1.1\EPOC32\BUILD\project\distr\sqlite\SQLite60\group\SQLITE\WINSCW\SQLITE.WINSCW" LIBRARY
+make -s  -r -f "\S60\devices\S60_3rd_FP2_SDK_v1.1\EPOC32\BUILD\project\distr\sqlite\SQLite60\group\SQLITETEST\WINSCW\SQLITETEST.WINSCW" LIBRARY
+  make -r  -f "\S60\devices\S60_3rd_FP2_SDK_v1.1\EPOC32\BUILD\project\distr\sqlite\SQLite60\group\WINSCW.make" RESOURCE CFG=UDEB VERBOSE=-s
+make -s  -r -f "\S60\devices\S60_3rd_FP2_SDK_v1.1\EPOC32\BUILD\project\distr\sqlite\SQLite60\group\SQLITE\WINSCW\SQLITE.WINSCW" RESOURCEUDEB
+make -s  -r -f "\S60\devices\S60_3rd_FP2_SDK_v1.1\EPOC32\BUILD\project\distr\sqlite\SQLite60\group\SQLITETEST\WINSCW\SQLITETEST.WINSCW" RESOURCEUDEB
+  make -r  -f "\S60\devices\S60_3rd_FP2_SDK_v1.1\EPOC32\BUILD\project\distr\sqlite\SQLite60\group\WINSCW.make" TARGET CFG=UDEB VERBOSE=-s
+make -s  -r -f "\S60\devices\S60_3rd_FP2_SDK_v1.1\EPOC32\BUILD\project\distr\sqlite\SQLite60\group\SQLITE\WINSCW\SQLITE.WINSCW" UDEB
+make -s  -r -f "\S60\devices\S60_3rd_FP2_SDK_v1.1\EPOC32\BUILD\project\distr\sqlite\SQLite60\group\SQLITETEST\WINSCW\SQLITETEST.WINSCW" UDEB
+  make -r  -f "\S60\devices\S60_3rd_FP2_SDK_v1.1\EPOC32\BUILD\project\distr\sqlite\SQLite60\group\WINSCW.make" FINAL CFG=UDEB VERBOSE=-s

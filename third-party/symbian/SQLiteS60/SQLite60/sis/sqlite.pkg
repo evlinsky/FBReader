@@ -1,0 +1,16 @@
+;Header
+#{"SQLite Database"},(0xA000029F),3,5,4
+
+;Supports S60 3.0
+[0x101F7961], 0, 0, 0, 
+   {"S60ProductID"}
+
+;Localized Vendor name
+%{"SQLite Database"}
+
+;Unique Vendor name
+:"Vendor"
+
+;Files to install
+;"c:\Symbian\9.1\S60_3rd_MR\epoc32\release\gcce\urel\symbian.dll"-"!:\sys\bin\symbian.dll"
+"c:\Symbian\9.1\S60_3rd_MR\epoc32\release\gcce\urel\sqlite.dll"-"!:\sys\bin\sqlite.dll"

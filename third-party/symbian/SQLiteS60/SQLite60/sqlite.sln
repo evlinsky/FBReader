@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sqlite", "sqliteS60.vcproj", "{BA1B373D-BFC5-4313-B12C-481E04C13CAF}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sqlitetest", "sqlitetest.vcproj", "{8349D439-39D0-44D4-A406-5B3E601D9651}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BA1B373D-BFC5-4313-B12C-481E04C13CAF} = {BA1B373D-BFC5-4313-B12C-481E04C13CAF}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Deb_S60_30M_WINSCW|Win32 = Deb_S60_30M_WINSCW|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BA1B373D-BFC5-4313-B12C-481E04C13CAF}.Deb_S60_30M_WINSCW|Win32.ActiveCfg = Deb_S60_30M_WINSCW|Win32
+		{BA1B373D-BFC5-4313-B12C-481E04C13CAF}.Deb_S60_30M_WINSCW|Win32.Build.0 = Deb_S60_30M_WINSCW|Win32
+		{8349D439-39D0-44D4-A406-5B3E601D9651}.Deb_S60_30M_WINSCW|Win32.ActiveCfg = Deb_S60_30M_WINSCW|Win32
+		{8349D439-39D0-44D4-A406-5B3E601D9651}.Deb_S60_30M_WINSCW|Win32.Build.0 = Deb_S60_30M_WINSCW|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

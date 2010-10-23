@@ -1,0 +1,7 @@
+prj_mmpfiles
+libexpat.mmp
+
+prj_exports
+../lib/expat.h		/epoc32/include/expat/expat.h
+../lib/expat_external.h	/epoc32/include/expat/expat_external.h
+

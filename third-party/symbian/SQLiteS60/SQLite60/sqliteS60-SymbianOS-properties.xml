@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NDSProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="1.0" supplier="Nokia">
+  <updateMmpFile>true</updateMmpFile>
+  <updateUidCppFile>true</updateUidCppFile>
+  <pkgFile>sis\sqliteS60.pkg</pkgFile>
+  <pkgUpdate>true</pkgUpdate>
+  <pkgGeneration>true</pkgGeneration>
+  <lang>EN</lang>
+  <copyExportsFlag>false</copyExportsFlag>
+</NDSProject>

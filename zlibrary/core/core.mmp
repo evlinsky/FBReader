@@ -149,7 +149,7 @@ SOURCE 		unix\filesystem\ZLUnixFSDir.cpp
 SOURCE 		unix\filesystem\ZLUnixFSManager.cpp
 SOURCE 		unix\iconv\IConvEncodingConverter.cpp
 // el SOURCE		unix\library\ZLibrary.cpp
-SOURCE 		unix\library\ZUnixLibrary.cpp
+SOURCE 		unix\library\ZSymbianLibrary.cpp
 //el SOURCE 		unix\time\ZLUnixTime.cpp
 SOURCE 		unix\xmlconfig\AsciiEncoder.cpp
 SOURCE 		unix\xmlconfig\XMLConfig.cpp

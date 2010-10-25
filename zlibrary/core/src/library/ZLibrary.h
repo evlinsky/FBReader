@@ -22,6 +22,12 @@
 
 #include <string>
 
+// el
+#define BASEDIR "."
+#define IMAGEDIR "."
+#define APPIMAGEDIR "."
+
+
 class ZLApplication;
 class ZLPaintContext;
 

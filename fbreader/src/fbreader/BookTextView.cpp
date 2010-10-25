@@ -37,7 +37,9 @@
 #include "../database/booksdb/BooksDB.h"
 #include "../library/Book.h"
 
-class BookTextView::PositionIndicatorWithLabels : public PositionIndicator {
+// el class BookTextView::PositionIndicatorWithLabels : PositionIndicator {
+
+class BookTextView::PositionIndicatorWithLabels : public BookTextView::PositionIndicator {
 
 public:
 	PositionIndicatorWithLabels(BookTextView &bookTextView, const ZLTextPositionIndicatorInfo &info);

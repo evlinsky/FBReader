@@ -97,7 +97,6 @@ SOURCE 		database\sqldb\implsqlite\SQLiteFactory.cpp
 SOURCE 		encodingOption\EncodingOptionEntry.cpp
 SOURCE 		external\ProgramCollection.cpp
 SOURCE 		fbreader\AddBookAction.cpp
-SOURCE 		fbreader\BookInfoDialog.cpp
 SOURCE 		fbreader\BooksOrderAction.cpp
 SOURCE 		fbreader\BookTextView.cpp
 SOURCE 		fbreader\ContentsView.cpp
@@ -280,15 +279,9 @@ SOURCE 		networkTree\SearchResultNode.cpp
 SOURCE 		options\FBCategoryKey.cpp
 SOURCE 		options\FBOptions.cpp
 SOURCE 		options\FBTextStyle.cpp
-SOURCE 		optionsDialog\ConfigPage.cpp
-SOURCE 		optionsDialog\FormatOptionsPage.cpp
-SOURCE 		optionsDialog\IndicatorTab.cpp
-SOURCE 		optionsDialog\IntegrationTab.cpp
-SOURCE 		optionsDialog\KeyBindingsPage.cpp
-SOURCE 		optionsDialog\NetworkLibraryPage.cpp
-SOURCE 		optionsDialog\OptionsDialog.cpp
-SOURCE 		optionsDialog\OptionsPage.cpp
-SOURCE 		optionsDialog\StyleOptionsPage.cpp
+SOURCE		optionsDialog\AbstractOptionsDialog.cpp
+SOURCE		optionsDialog\IntegrationTab.cpp
+
 
 SYSTEMINCLUDE	\epoc32\include\stdapis
 SYSTEMINCLUDE	\epoc32\include\stdapis\sys
